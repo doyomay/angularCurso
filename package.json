@@ -1,0 +1,23 @@
+{
+  "name": "angular",
+  "version": "1.0.0",
+  "description": "Curso angular js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/doyomay/angularCurso"
+  },
+  "keywords": [
+    "angularjs",
+    "curso"
+  ],
+  "author": "@doyomay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/doyomay/angularCurso/issues"
+  },
+  "homepage": "https://github.com/doyomay/angularCurso"
+}
