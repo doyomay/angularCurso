@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html data-ng-app="controladores">
+<head lang="en">
+  <meta charset="UTF-8">
+  <title data-ng-controller="metas">curso angular js | {{ seccion }}</title>
+  <style>
+    .container {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1080px;
+    }
+
+    .row {
+      padding: 15px 0;
+    }
+
+    .u-centrar {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div data-ng-controller="controladorConMetodo">
+      <label>Suma: <input type="number" data-ng-model="valor1"/></label>
+      <br/>
+      <br/>
+      <label>Resta: <input type="number" data-ng-model="valor2"/></label>
+
+      <p>
+        <button data-ng-click="sumar()">Sumar</button>
+        <button data-ng-click="multiplicar()">Multiplicar</button>
+      </p>
+
+      <hr/>
+
+      <p>{{resultado}}</p>
+    </div>
+  </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+<script>
+  var controladorApp = angular.module('controladores', []);
+  controladorApp.controller('metas', function ($scope) {
+    $scope.seccion = 'Controladores';
+  });
+
+  controladorApp.controller('controladorConMetodo', function ($scope) {
+    $scope.valor1 = 12;
+    $scope.valor2 = 23;
+
+    $scope.sumar = function () {
+      $scope.resultado = $scope.valor1 + $scope.valor2;
+    };
+
+    $scope.multiplicar = function () {
+      $scope.resultado = $scope.valor1 * $scope.valor2;
+    };
+  });
+</script>
+
+</body>
+
+</html>
